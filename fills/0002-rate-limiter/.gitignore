@@ -1,0 +1,11 @@
+# python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# mac
+.DS_Store
+**/.DS_Store

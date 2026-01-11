@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lcrc-ratelimit"
+version = "0.1.0"
+description = "LCRC Fill 0002 — Rate limiter (token bucket)"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "Magomed Bankurov" }]
+
+[project.scripts]
+lcrc-ratelimit = "lcrc_ratelimit.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
