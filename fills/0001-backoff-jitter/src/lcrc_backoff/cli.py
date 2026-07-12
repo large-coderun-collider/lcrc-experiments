@@ -32,17 +32,7 @@ def main() -> None:
         )
         delays = list(policy.delays())
     except ValueError as e:
-        raise SystemExit(f"error: {e}") from e    
-
-    policy = RetryPolicy(
-        max_attempts=args.max_attempts,
-        base=args.base,
-        factor=args.factor,
-        cap=args.cap,
-        jitter=args.jitter,
-        seed=args.seed,
-    )
-    delays = list(policy.delays())
+        raise SystemExit(f"error: {e}") from e
 
     if args.json:
         payload = {"policy": asdict(policy), "delays": delays}
